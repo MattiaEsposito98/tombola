@@ -24,10 +24,13 @@ function estraction(event) {
     alert("Tutti i numeri sono stati estratti!");
     return
   }
-  const min = 1;
-  const max = 90;
-  const numeroCasuale = Math.floor(Math.random() * (max - min + 1)) + min;
+  const randomIndex = Math.floor(Math.random() * all_numbers.length);
+  const numeroCasuale = all_numbers[randomIndex]; // Estrai un numero casuale dall'array
   console.log("Numero estratto: " + numeroCasuale);
-  all_numbers.splice(numeroCasuale, 1);
+
+  // Rimuovi il numero estratto dall'array
+  all_numbers.splice(randomIndex, 1);
+  console.log("estr" + all_numbers)
 }
+
 
